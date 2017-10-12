@@ -9,11 +9,11 @@ export class StoreProvider extends React.Component<StoreProviderProps, void> {
     }
 
     public static contextTypes = {
-        storeContainer: React.PropTypes.instanceOf(StoreContainer),
+        storeContainer: React.PropTypes.any,
     }
 
     public static childContextTypes = {
-        storeContainer: React.PropTypes.instanceOf(StoreContainer).isRequired,
+        storeContainer: React.PropTypes.any.isRequired,
     }
 
     private storeContainer: StoreContainerInstance

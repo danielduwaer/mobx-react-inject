@@ -16,7 +16,7 @@ function propertyDecorator(target: any, propertyName: string) {
     }
 
     if (targetConstructor.contextTypes.storeContainer == null) {
-        targetConstructor.contextTypes.storeContainer = React.PropTypes.instanceOf(StoreContainer).isRequired
+        targetConstructor.contextTypes.storeContainer = React.PropTypes.any.isRequired
     }
 
     Object.defineProperty(target, propertyName, {
